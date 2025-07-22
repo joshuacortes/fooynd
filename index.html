@@ -133,8 +133,8 @@
   max-width: 1200px;
   margin: 0 auto;
   align-items: flex-start;
+  padding: 0 2rem; /* ✅ adds horizontal padding */
   
-    margin-left:0px;
 }
 
 .footer h2 {
@@ -197,10 +197,14 @@
 /* Responsive layout */
 @media (min-width: 768px) {
   .footer-container {
-    flex-direction: row;
+   flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left:110px;
+
+    max-width: 800px;   /* limit the width */
+    margin: 0 auto;      /* horizontally center it */
+    padding: 0 2rem;     /* add left/right breathing room */
+    width: 100%;         /* ensure it spans available space */
   }
 
   .footer-brand,
