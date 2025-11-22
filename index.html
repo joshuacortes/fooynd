@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joshua Cortes Sales</title>
+  <title>Customer Service & Sales | Fooynd</title>
   <style>
     * {
       margin: 0;
@@ -13,122 +13,127 @@
     }
 
     body {
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
+      min-height: 100vh;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #0d0d0d;
+      color: white;
+      padding: 40px 20px;
       opacity: 0;
-      transition: opacity 1.3s ease-in-out;
+      transition: opacity 1.2s ease-in-out;
     }
 
     .container {
+      max-width: 1100px;
+      width: 100%;
       text-align: center;
-      color: white;
     }
 
-    .logo-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 18px;
-      margin: 0 35px;
+    .headline {
+      font-size: 1.9rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .subhead {
+      font-size: 1.15rem;
+      color: #cccccc;
+      margin-bottom: 40px;
     }
 
     .logos-wrapper {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 80px;
+      gap: 90px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+    }
+
+    .logo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      max-width: 90%;
     }
 
     .logo-section img {
-      width: 200px;
-      max-width: 40vw;
+      width: 220px;
+      max-width: 80%;
       height: auto;
-      transition: transform 0.3s ease;
+      margin-bottom: 18px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .logo-section img:hover {
       transform: scale(1.05);
+      opacity: 0.85;
     }
 
-    .button-group {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-    }
-
-    .btn {
-      padding: 10px 24px;
-      border-radius: 28px;
-      background: #ffffff11;
-      border: 1px solid #ffffff33;
-      text-decoration:none;
-      color: white;
-      font-size: 0.95rem;
-      letter-spacing: 0.4px;
-      cursor: pointer;
-      backdrop-filter: blur(6px);
-      transition: background 0.25s ease, transform 0.25s ease;
-    }
-
-    .btn:hover {
-      background: #ffffff22;
-      transform: translateY(-3px);
+    .service-label {
+      margin-top: 6px;
+      font-size: 1rem;
+      color: #e0e0e0;
+      letter-spacing: 0.5px;
     }
 
     @media (max-width: 700px) {
+      .headline {
+        font-size: 1.55rem;
+      }
+      .subhead {
+        font-size: 1rem;
+      }
       .logos-wrapper {
-        gap: 45px;
+        gap: 55px;
       }
       .logo-section img {
-        width: 160px;
+        width: 180px;
       }
-      .button-group {
-        flex-direction: column;
-      }
-      .btn {
-        width: 80%;
-        max-width: 260px;
+      body {
+        padding: 40px 16px;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
+
+    <h1 class="headline">Customer Service & Sales</h1>
+    <p class="subhead">FOOYND provides customer support and sales services for these organizations:</p>
+
     <div class="logos-wrapper">
 
-      <!-- Fable Pak Logo Section -->
+      <!-- Pristine Cleaners Logo -->
       <div class="logo-section">
-        <a href="https://www.fablepak.com/" target="_blank">
-          <img src="https://images.squarespace-cdn.com/content/v1/685de76f4f74c83fc9fb43ef/c65f8847-9ba6-4707-b4b9-da9da0b531cf/Fable+Pak.png?format=1500w" alt="Fable Pak Logo" />
+        <a href="https://pristinecleanersoc.com/" target="_blank">
+          <img src="https://pristinecleanersoc.com/wp-content/uploads/2024/01/logo.png" 
+               alt="Pristine Cleaners Logo">
         </a>
-        <div class="button-group">
-        </div>
+        <div class="service-label">Pristine Cleaners OC</div>
       </div>
 
-      <!-- Gerard Signs Logo Section -->
+      <!-- Fable Pak Logo -->
       <div class="logo-section">
-        <a href="https://gerardsigns.com/" target="_blank">
-          <img src="https://gerardsigns.com/wp-content/uploads/2023/10/Logo-Dark-180x87.png" alt="Gerard Signs Logo" />
+        <a href="https://www.fablepak.com/" target="_blank">
+          <img src="https://images.squarespace-cdn.com/content/v1/685de76f4f74c83fc9fb43ef/c65f8847-9ba6-4707-b4b9-da9da0b531cf/Fable+Pak.png?format=1500w" 
+               alt="Fable Pak Logo">
         </a>
-        <div class="button-group">
-        </div>
+        <div class="service-label">Fable Pak Packaging</div>
       </div>
 
     </div>
   </div>
 
   <script>
-    // smooth fade-in
     window.onload = () => {
       document.body.style.opacity = 1;
     };
   </script>
+
 </body>
 </html>
